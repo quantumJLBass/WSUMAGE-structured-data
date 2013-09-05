@@ -11,8 +11,8 @@
 
 class Wsu_StructuredData_IndexController extends Mage_Core_Controller_Front_Action
 {
-	public function indexAction()
-	{
+	//public function indexAction()
+	//{
 		// disabled <-> danger of a ddos attack
 		/**
 		$this->getResponse()->setHeader('Content-type', 'application/rdf+xml');
@@ -27,5 +27,5 @@ class Wsu_StructuredData_IndexController extends Mage_Core_Controller_Front_Acti
 				);
 		$this->renderLayout();
 		*/
-	}
+	//}
 }
