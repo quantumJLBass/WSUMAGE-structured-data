@@ -13,7 +13,7 @@
 <config>
     <modules>
         <Wsu_StructuredData>
-            <version>1.2.6.5</version>
+            <version>0.1</version>
             <depends>
                 <Mage_Page />
             </depends>

@@ -8,8 +8,7 @@
  * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
  * You should have received a copy of the GNU General Public License along with this program; if not, see <http://www.gnu.org/licenses/>
 **/
-class Wsu_StructuredData_Block_Product extends Mage_Catalog_Block_Product_Abstract
-{
+class Wsu_StructuredData_Block_Product extends Mage_Catalog_Block_Product_Abstract {
 	// Helper
 	public $rdffClassName = 'structureddata/Rdfaformat';
 	private $rdff = NULL;		// rdf format helper
@@ -22,13 +21,12 @@ class Wsu_StructuredData_Block_Product extends Mage_Catalog_Block_Product_Abstra
 	private $generalSettings;	// 
 	
     
-	public function __construct()
-    {
+	public function __construct(){
     	parent::__construct();
+		die();exit();
     }
     
-	protected function initData()
-	{
+	protected function initData(){
 		$this->generalSettings = Mage::getStoreConfig("general");
 		$this->settings = Mage::getStoreConfig("wsustructureddata");
 		// Helpre
@@ -41,8 +39,8 @@ class Wsu_StructuredData_Block_Product extends Mage_Catalog_Block_Product_Abstra
 		$this->GR->setRdff($this->rdffClassName);
 	}
     
-	protected function _toHtml()
-	{
+	protected function _toHtml(){
+		die();exit();
 		$html = "\n<!-- WSU Structured Data -->"; 
 		$html .="\n"; 
 		$id = Mage::registry('current_product')->getId();;
@@ -50,11 +48,10 @@ class Wsu_StructuredData_Block_Product extends Mage_Catalog_Block_Product_Abstra
    		
    		if ($product->getTypeId() == "grouped") {
    			$html .= "<!-- Magento grouped products are not supported by MSemantic at the moment.-->";
-   		}else {
-		@include_once("../../EssentiaLib/includeAll.php");
+		} else {
+		//@include_once("../../EssentiaLib/includeAll.php");
 			$this->initData();
-			if ($this->settings['basicsettings']['active'])
-			{
+			if ($this->settings['basicsettings']['active']){
 				$html .= parent::_toHtml();
 				$this->rdff->useRdfNamespaces("rdf,rdfs,xsd,dc,owl,vcard,gr,product,v,foaf,media");
 				$html .= $this->rdff->startRdfa($this->Business->getLegalName());
