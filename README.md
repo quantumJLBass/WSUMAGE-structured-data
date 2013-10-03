@@ -3,7 +3,14 @@ StructuredData
 
 Magento Rich Structured data
 
-this extention is the automatical set up product and company based rich data.  it uses the good relation data schema from schema.org.  infomation on the can be found here[1][http://blog.schema.org/2012/11/good-relations-and-schemaorg.html]
-This is a Magento module to allow for injection of rich structured data for better indexing and seo.
+This extention is the automatical set up product and company based rich data.  It uses the good relation data schema from schema.org.  infomation on the can be found [here](http://blog.schema.org/2012/11/good-relations-and-schemaorg.html)
+The reason to use rich data in your out put is as simple as better seo.  Google for example has out put like this:
+
+![example from google](https://www.google.com/help/hc/images/webmasters/webmasters_99170_rsreview_en.png)
+
+
+
+
+
 
 Install is as simple as upload, clean Magento’s cache, log out and in, and adjust the settings. 
