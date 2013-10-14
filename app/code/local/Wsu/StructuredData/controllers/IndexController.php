@@ -9,10 +9,8 @@
  * You should have received a copy of the GNU General Public License along with this program; if not, see <http://www.gnu.org/licenses/>
 **/
 
-class Wsu_StructuredData_IndexController extends Mage_Core_Controller_Front_Action
-{
-	//public function indexAction()
-	//{
+class Wsu_StructuredData_IndexController extends Mage_Core_Controller_Front_Action {
+	//public function indexAction() {
 		// disabled <-> danger of a ddos attack
 		/**
 		$this->getResponse()->setHeader('Content-type', 'application/rdf+xml');
