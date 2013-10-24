@@ -76,10 +76,10 @@ class Wsu_StructuredData_Model_Resource_Eav_Mysql4_Setup extends Mage_Eav_Model_
 		$email = Mage::getStoreConfig('trans_email/ident_general/email');
 		$base_url = Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_WEB);
 		$sitemap_url = $submission_url.$base_url."sitemap.xml"."&contact=".$email."&agent=msemantic-0.9.9.3.8";
-		$this->_wsuMsemanticHttpGet($sitemap_url);	
+		$this->_wsu_StructuredDataHttpGet($sitemap_url);	
 		}
 	
-	public function _wsuMsemanticHttpGet($url)
+	public function _wsu_StructuredDataHttpGet($url)
 	{
 		// file operations are allowed
 		if (ini_get('allow_url_fopen') == '1') {

@@ -11,7 +11,7 @@
 $installer = $this;
 $installer->installEntities();
 // perform HTTP GET on endpoint with given URL
-function _wsuMsemanticInstallHttpGet($url) {
+function _wsu_StructuredDataInstallHttpGet($url) {
     // file operations are allowed
     if (ini_get('allow_url_fopen') == '1') {
         $str = file_get_contents($url);
@@ -38,7 +38,7 @@ function _wsuMsemanticInstallHttpGet($url) {
             return false;
         } else {
             // send the necessary headers to get the file
-            fwrite($fp, "GET " . $url['path'] . "?" . $url['query'] . " HTTP/1.0\r\n" . "Host:" . $url['host'] . "\r\n" . "Accept: text/html\r\n" . "User-Agent: GoodRelations Extension for Joomla v2\r\n" . "Connection: close\r\n\r\n");
+            fwrite($fp, "GET " . $url['path'] . "?" . $url['query'] . " HTTP/1.0\r\n" . "Host:" . $url['host'] . "\r\n" . "Accept: text/html\r\n" . "User-Agent: GoodRelations Extension for Magento v2\r\n" . "Connection: close\r\n\r\n");
             // retrieve response from server
             $buffer            = "";
             $status_code_found = false;
