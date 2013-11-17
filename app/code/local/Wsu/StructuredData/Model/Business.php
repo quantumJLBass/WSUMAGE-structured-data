@@ -1,13 +1,4 @@
 <?php
-/**
- * StructuredData Magento Extension
- * @package Wsu_StructuredData
- * @copyright (c) 2013+ Jeremy Bass
- * @author Jeremy Bass <jeremy.bass@wsu.edu>
- * This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 3 of the License, or (at your option) any later version.
- * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
- * You should have received a copy of the GNU General Public License along with this program; if not, see <http://www.gnu.org/licenses/>
- **/
 class Wsu_StructuredData_Model_Business extends Mage_Core_Model_Abstract {
     protected $_settings;
     protected $_generalSettings;
@@ -26,13 +17,7 @@ class Wsu_StructuredData_Model_Business extends Mage_Core_Model_Abstract {
     }
     public function initData() {
         $this->initBaseURL();
-        // version >=1.4
-        if ($this->sysinfo->mageVersionBiggerThanOrEqual("1.4")) {
-            $legalname = $this->getSettings("businessinformation/legalname") ? $this->getSettings("businessinformation/legalname") : @$this->getGeneralSettings("store_information/name");
-        } else // version <1.4
-            {
-            $legalname = $this->getSettings("businessinformation/legalname");
-        }
+        $legalname = $this->getSettings("businessinformation/legalname") ? $this->getSettings("businessinformation/legalname") : @$this->getGeneralSettings("store_information/name");
         $this->setLegalName($this->div->removeTagsAndNls($legalname));
         $this->initAddresses();
         $this->initOfferingDescription();
