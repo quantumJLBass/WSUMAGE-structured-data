@@ -137,49 +137,5 @@ class Wsu_StructuredData_Model_Observer {
         }
     }
 }
-// $a = new Wsu_StructuredData_Model_Observer;
-//  $a->submitSemanticWebData();
-// echo var_dump(Mage::getBaseUrl());
-// perform HTTP GET on endpoint with given URL
-// thanks go to Alex Stolz // goodrelations-for-joomla
-/* Deprecated
-
-protected function pingTheSemanticWeb()
-{
-// Shop Models
-/
-$this->Business = Mage::getModel('structureddata/Business');
-$client = new Zend_XmlRpc_Client('http://rpc.pingthesemanticweb.com');
-$params = array(
-"name"	=> $this->Business->getLegalName(),
-"url"	=> Mage::getUrl('')."semanticweb.rdf"
-);
-$result = $client->call('weblogUpdates.ping', $params);
-$this->debug($result);
-
-// ganz normal per GET-Methode
-//$this->debug(Mage::getUrl() . 'semanticweb.rdf');
-$url = Mage::getBaseUrl() . "semanticweb.rdf";
-$url = str_replace('index.php/', '', $url);	// important to remove index.php/ fom the base_url
-//$this->debug($url);
-$ptswlink = 'http://pingthesemanticweb.com/ping.php?url=' . $this->jsEscape($url);
-$this->debug(implode("\n", file($ptswlink)));
-return;
-}
-
-protected function pingSindice()
-{
-
-// Shop Models
-$this->Business = Mage::getModel('structureddata/Business');
-$client = new Zend_XmlRpc_Client('http://sindice.com/xmlrpc/api');
-$params = array(
-"name"	=> $this->Business->getLegalName(),
-"url"	=> Mage::getUrl('')."semanticweb.rdf"
-);
-$result = $client->call('weblogUpdates.ping', $params);
-$this->debug($result);
-}
-*/
 ?>
 	
