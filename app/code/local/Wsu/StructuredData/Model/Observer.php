@@ -113,7 +113,7 @@ class Wsu_StructuredData_Model_Observer {
                 return false;
             } else {
                 // send the necessary headers to get the file
-                fwrite($fp, "GET " . $url['path'] . "?" . $url['query'] . " HTTP/1.0\r\n" . "Host:" . $url['host'] . "\r\n" . "Accept: text/html\r\n" . "User-Agent: MSemantic v2\r\n" . "Connection: close\r\n\r\n");
+                fwrite($fp, "GET " . $url['path'] . "?" . $url['query'] . " HTTP/1.0\r\n" . "Host:" . $url['host'] . "\r\n" . "Accept: text/html\r\n" . "User-Agent: WSUSD v2\r\n" . "Connection: close\r\n\r\n");
                 // retrieve response from server
                 $buffer            = "";
                 $status_code_found = false;
