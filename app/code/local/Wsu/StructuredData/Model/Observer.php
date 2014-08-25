@@ -57,8 +57,10 @@ class Wsu_StructuredData_Model_Observer {
         return $output;
     }
     protected function debug($content) {
-        if (!$_GET['debug'])
+		$debug	= Mage::app()->getRequest()->getParam('debug');
+        if (!isset($debug) || !$debug){
             return;
+		}
         $type = gettype($content);
         echo '<div style="background-color: #FFF; border: solid 1px #000; padding: 5px 10px; font: 11px/15px Arial,sans-serif; display: block; color: #444; text-align: left; width: 960px; margin: 0px auto;">';
         echo "<b> | </b>";

@@ -52,9 +52,7 @@ class Wsu_StructuredData_Block_Datadump extends Mage_Catalog_Block_Product_Abstr
         }
     }
     protected function initProductCollection() {
-        //*****************************************************
-        // 2010-03-11
-        //*****************************************************
+
         $storeId                 = Mage::app()->getStore()->getId();
         // $visibility = Mage_Catalog_Model_Product_Status::STATUS_DISABLED 
         $visibility              = array(
